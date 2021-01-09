@@ -1,0 +1,58 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+/* index.html located under public -> #root */
+body, #root {
+  height: 100vh;
+  margin: 0;
+}
+
+body, input, select, textarea {
+  font-size: 1.6rem;
+  font-family: Hevetica;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: #203040;
+  color: white;
+
+    /* center vertical alignment */
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+header > a {
+  color: white;  
+  text-decoration: none;
+}
+
+a:hover {
+  color: orange;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: white;
+
+  /* center vertical and horizontal alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
