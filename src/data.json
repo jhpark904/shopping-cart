@@ -5,7 +5,7 @@
         "image": "/images/dress1.jpg",
         "description": "about dress1",
         "price": 25,
-        "size": ["S", "M"]
+        "availableSizes": ["S", "M"]
         },
         {
             "_id": "dress2",
