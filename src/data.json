@@ -3,7 +3,7 @@
         {"_id": "dress1",
         "title": "Midi sundress with shirring detail",
         "image": "/images/dress1.jpg",
-        "description": "about dress1",
+        "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "price": 25,
         "availableSizes": ["S", "M"]
         },
