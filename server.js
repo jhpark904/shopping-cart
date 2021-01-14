@@ -19,8 +19,8 @@ const Product = mongoose.model("products", new mongoose.Schema({
     title: String, 
     description: String,
     image: String,
-    price: String,
-    availableSizes: {String},
+    price: Number,
+    availableSizes: [String],
 }))
 
 app.get("/api/products", async (req, res) => {
