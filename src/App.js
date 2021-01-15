@@ -7,55 +7,6 @@ import Products from './components/Products';
 import store from "./store"
 
 class App extends React.Component {
-  constructor() {
-    super()
-
-    /* default state */
-    this.state = {
-      cartItems: JSON.parse(localStorage.getItem("cartItems")) ? JSON.parse(localStorage.getItem("cartItems")) :
-      [],
-    }
-  }
-
-  createOrder = (order) => {
-    alert(order.name)
-  }
-
-  removeFromCart = (product) => {
-    const cartItems = this.state.cartItems.slice()
-
-    this.setState({cartItems: cartItems.filter(x=>x._id !== product._id)})
-    
-    // store current state
-    localStorage.setItem("cartItems", JSON.stringify(cartItems.filter(x=>x._id !== product._id)))    
-  }
-
-  addToCart = (product) => {
-    console.log("hello")
-
-    // copy of cartItems list
-    const cartItems = this.state.cartItems.slice();
-    let inCart = false;
-
-    cartItems.forEach(item => {
-      if (item._id === product._id) { // same item added to cart
-        item.count++
-        inCart = true
-      }
-    })
-
-    // push into the list
-    if (!inCart) {
-      cartItems.push({...product, count: 1})
-    }
-
-    // change the cartItems array in the state
-    this.setState({ cartItems })
-
-    // to store the state when the page is reloaded
-    localStorage.setItem("cartItems", JSON.stringify(cartItems))
-  }
-
   render() {
     return (
       <Provider store ={store}>
@@ -68,14 +19,10 @@ class App extends React.Component {
             <div className="content">
               <div className="main">
                 <Filter></Filter>
-                <Products addToCart={this.addToCart}></Products>
+                <Products></Products>
               </div>
               <div className="sidebar">
-                <Cart 
-                cartItems={this.state.cartItems}
-                removeFromCart={this.removeFromCart}
-                createOrder={this.createOrder}
-                />
+                <Cart/>
               </div>
             </div>
           </main>
