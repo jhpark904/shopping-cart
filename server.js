@@ -13,7 +13,7 @@ mongoose.connect("mongodb://localhost/shopping-cart-db", {
     useUnifiedTopology: true,
 })
 
-// create a model
+// create a model for products available
 const Product = mongoose.model("products", new mongoose.Schema({
     _id: {type: String, default: shortid.generate},
     title: String, 
@@ -29,6 +29,7 @@ app.get("/api/products", async (req, res) => {
     res.send(products)
 })
 
+// post product
 app.post("/api/products", async (req, res) => {
     const newProduct = new Product(req.body)
     // save new product in database
@@ -40,6 +41,43 @@ app.post("/api/products", async (req, res) => {
 app.delete("/api/products/:id", async(req, res) => {
     const deletedProduct = await Product.findByIdAndDelete(req.params.id)
     res.send(deletedProduct)
+})
+
+// create model for order
+const Order = mongoose.model("order", new mongoose.Schema({
+    _id: {
+        type: String,
+        default: shortid.generate
+    },
+    email: String,
+    name: String,
+    address: String,
+    total: Number,
+    cartItems: [{
+        _id: String,
+        title: String,
+        price: Number,
+        count: Number
+    }],
+    },
+    {
+        timestamps: true,
+    }
+    )
+)
+
+// post to the completed order
+app.post("/api/orders", async(req, res)=> {
+    if(!req.body.name || 
+        !req.body.email ||
+        !req.body.address ||
+        !req.body.total ||
+        !req.body.cartItems
+    ){
+        return res.send({message: "Data is required."})
+    }
+    const order = await Order(req.body).save()
+    res.send(order)
 })
 
 const port = process.env.PORT || 5000
