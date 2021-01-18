@@ -41,6 +41,7 @@ header {
 }
 
 header > a {
+  margin: 2rem;
   color: white;  
   text-decoration: none;
 }
@@ -71,7 +72,7 @@ footer {
 }
 
 .main {
-  flex: 3 60rem;
+  flex: 2 60rem;
 }
 
 .sidebar {
@@ -82,10 +83,10 @@ footer {
 .products {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin-left: 5rem;
   list-style-type: none;
 }
 .products li {
@@ -122,6 +123,16 @@ footer {
 
 .product-price div {
   font-size: 2rem;
+}
+
+a.product-link {
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+a.product-link:hover {
+  color:#f0c040;
 }
 
 .button {
@@ -162,7 +173,6 @@ select {
   padding: 1rem;
   margin: 1rem;
   display: flex;
-
 }
 
 .cart-header {

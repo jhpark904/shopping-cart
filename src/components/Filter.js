@@ -17,7 +17,7 @@ class Filter extends Component {
                             <option value="highest">Highest</option>
                         </select>
                     </div>
-                    <div className="filter-size">Filter
+                    <div className="filter-size">Size
                         <select value={this.props.size} onChange={(e) => this.props.filterProducts(this.props.products, e.target.value)}>
                             <option value="">All</option>
                             <option value="XS">XS</option>
