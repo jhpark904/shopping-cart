@@ -27,11 +27,4 @@ The application does not support:
  - Redux: for managing react components' states
  - Node & Express: for backend development following Restful API principles
  - MongoDB: database to store product and order data
-
-## Credits
-[Bassir Jafarzadeh](https://github.com/basir/)
-
-
-
-
-
+ 
