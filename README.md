@@ -1,10 +1,36 @@
-# T-shirt Shopping Mall | React, Redux, Node, Express, MongoDB, HTML, CSS, RESTful API
-https://t-shirt-mall.herokuapp.com/
+# T-shirt Shopping Mall
 
-- A responsive shopping mall web application that lets users to add products to cart and process orders
-- Shopping mall and Admin pages are designed with HTML and CSS, and animations are created with React
-- Components for size/sort filters, cart, and product listings are implemented with React and their states are managed with Redux
-- RESTful API developed with Node and Express, and MongoDB is used to store order and product information in database
+## Project Overview
+
+T-shirt Shopping Mall is a web application designed with React and backed by MongoDB. 
+
+## Illustrations
+
+[See Project](https://t-shirt-mall.herokuapp.com/)
+
+
+## Scope of Functionality
+
+The application supports:
+ - filtering by size and sorting by price and date of products
+ - addition of items of choice from product listings to user's shopping cart
+ - storing of customer and order data in database
+
+The application does not support:
+ - processing of customer payment
+
+## Technologies Used
+ 
+ - Html: for the contents of each page
+ - CSS: for the design of each page
+ - React: for creating front end components and interactive animations
+ - Redux: for managing react components' states
+ - Node & Express: for backend development following Restful API principles
+ - MongoDB: database to store product and order data
+
+## Credits
+[Bassir Jafarzadeh](https://github.com/basir/)
+
 
 
 
