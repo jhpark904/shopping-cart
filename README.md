@@ -6,7 +6,7 @@ T-shirt Shopping Mall is a web application designed with React and backed by Mon
 
 ## Illustrations
 
-[See Project](https://t-shirt-mall.herokuapp.com/)
+[See project](https://t-shirt-mall.herokuapp.com/)
 
 
 ## Scope of Functionality
